@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guru Pengampu | XII TKJ 2</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary-dark:#0a192f;
+    --accent-blue:#007bff;
+    --text-light:#e6f1ff;
+    --bg-gradient:linear-gradient(135deg,#0a192f 0%,#020c1b 100%);
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg-gradient);
+    color:var(--text-light);
+}
+
+/* Navbar */
+.navbar{
+    background:rgba(10,25,47,.95);
+    border-bottom:1px solid rgba(0,123,255,.2);
+}
+
+.navbar-brand{
+    color:var(--accent-blue)!important;
+    font-weight:700;
+}
+
+.nav-link{
+    color:var(--text-light)!important;
+}
+
+.nav-link:hover,
+.nav-link.active{
+    color:var(--accent-blue)!important;
+}
+
+/* Section */
+.section{
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    color:var(--accent-blue);
+    font-weight:700;
+}
+
+/* Table */
+.table-custom{
+    background:rgba(255,255,255,.05);
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.table th{
+    background:rgba(0,123,255,.15);
+    color:var(--accent-blue);
+    text-align:center;
+}
+
+.table td{
+    vertical-align:middle;
+    text-align:center;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:30px 0;
+    font-size:.85rem;
+    opacity:.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">CLASS COMPUTER & NETWORK</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Akademik</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="akademik.html">Jadwal Pelajaran</a></li>
+                        <li><a class="dropdown-item active" href="guru.html">Daftar Guru Pengampu</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENT -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Daftar Guru Pengampu</h2>
+            <p class="opacity-75">Mata pelajaran kelas XII TKJ 2</p>
+        </div>
+
+        <div class="table-responsive table-custom p-3">
+            <table class="table table-borderless text-light mb-0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Guru</th>
+                        <th>Mata Pelajaran</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Selvin Zega, S.KOM</td>
+                        <td>KKJ 5</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Martinus Gulo, S.KOM</td>
+                        <td>KKJ 5</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Insani Zebua, S.Pd</td>
+                        <td>Matematika Lanjutan</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ampun Fado Waruwu,S.Pd</td>
+                        <td>Matematika Wajib</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Eminiat Zebua,S.Pd</td>
+                        <td>Bahasa Indonesia</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Susi Waruwu,S.Pd</td>
+                        <td>Bahasa Inggris</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Tri Dewi Capri Gea,
+                        S.Pd</td>
+                        <td>Bahasa Inggris</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Dewi Mawati Tafonao,S.Th.</td>
+                        <td>Pendidikan Agama Kristen</td>
+                       </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 XII TKJ 2
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

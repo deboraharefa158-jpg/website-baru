@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anggota Kelas | XII TKJ 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #0a192f;
+            --accent-blue: #007bff;
+            --text-light: #e6f1ff;
+            --bg-gradient: linear-gradient(135deg, #0a192f 0%, #020c1b 100%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-light);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: rgba(10, 25, 47, 0.95) !important;
+            border-bottom: 1px solid rgba(0, 123, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand { font-weight: 700; color: var(--accent-blue) !important; }
+        .nav-link { color: var(--text-light) !important; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--accent-blue) !important; }
+
+        .section-header { padding: 60px 0 40px; text-align: center; }
+
+        /* Card Student Styling */
+        .student-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 123, 255, 0.1);
+            border-radius: 20px;
+            padding: 25px 15px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+        }
+
+        .student-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-blue);
+            background: rgba(0, 123, 255, 0.08);
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
+        }
+
+        /* Foto Member */
+        .member-photo {
+            width: 130px; /* Ukuran besar sesuai permintaan */
+            height: 130px;
+            border-radius: 20px; /* Kotak rounded sedikit biar modern */
+            border: 2px solid rgba(0, 123, 255, 0.3);
+            margin: 0 auto 15px;
+            overflow: hidden;
+            background: #112240;
+        }
+
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .student-name {
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            color: #fff;
+            height: 2.4em; /* Menjaga tinggi teks agar tetap sejajar */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .student-id {
+            font-size: 0.7rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        footer { padding: 40px 0; text-align: center; opacity: 0.5; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+     <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">CLASS COMPUTER & NETWORK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="akademikDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Akademik
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="akademik.html">Jadwal Pelajaran</a></li>
+                            <li><a class="dropdown-item" href="guru.html">Daftar Guru Pengampuh</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="organisasiDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Organisasi
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="struktur.html">Struktur Organisasi</a></li>
+                            <li><a class="dropdown-item" href="anggota.html">Anggota Kelas</a></li>
+                       
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="section-header">
+            <h1 class="fw-bold">Database Siswa</h1>
+            <p class="text-muted">XII Teknik Komputer dan Jaringan 2 (31 Anggota)</p>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">ABDI TERIMA YAKIN TELAUMBANUA</p>
+                    <span class="student-id">TKJ2-01</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">ALDO HONEST LASE</p>
+                    <span class="student-id">TKJ2-02</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">ALVA CHRISTABEL GEA</p>
+                    <span class="student-id">TKJ2-03</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">ANDRIAN DARMAN ZEBUA</p>
+                    <span class="student-id">TKJ2-04</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">AUGUSMAN WARUWU</p>
+                    <span class="student-id">TKJ2-05</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">BERKAT JUNIUS PUTRA ZEBUA</p>
+                    <span class="student-id">TKJ2-06</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">BERNATH ALVA SEPTRIAN HAREFA</p>
+                    <span class="student-id">TKJ2-07</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">BRIAN KHARIS ELDAMAI WARURU</p>
+                    <span class="student-id">TKJ2-08</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cewek.jpg" alt="Foto"></div>
+                    <p class="student-name">DEBORA DESFRIDA HAREFA</p>
+                    <span class="student-id">TKJ2-09</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cewek.jpg" alt="Foto"></div>
+                    <p class="student-name">DEWI FRANSISKA MENDROFA</p>
+                    <span class="student-id">TKJ2-10</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">EZRA STEVEN YASARO ZEBUA</p>
+                    <span class="student-id">TKJ2-11</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">FEBRI BERKAT ZENDRATO</p>
+                    <span class="student-id">TKJ2-12</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">FERDIN KARUNIA SARO ZEBUA</p>
+                    <span class="student-id">TKJ2-13</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">GERSON ENONI SARO ZEBUA</p>
+                    <span class="student-id">TKJ2-14</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cewek.jpg" alt="Foto"></div>
+                    <p class="student-name">GESTINA HALAWA</p>
+                    <span class="student-id">TKJ2-15</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">HERLISMAN ZEBUA</p>
+                    <span class="student-id">TKJ2-16</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">JOIN PUTRA FERONI ZEBUA</p>
+                    <span class="student-id">TKJ2-17</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">JUBEL SEPTRIONO HAREFA</p>
+                    <span class="student-id">TKJ2-18</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cewek.jpg" alt="Foto"></div>
+                    <p class="student-name">JUNI CAHYANTI ZEBUA</p>
+                    <span class="student-id">TKJ2-19</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">KELVIN TRISWANTO LASE</p>
+                    <span class="student-id">TKJ2-20</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cewek.jpg" alt="Foto"></div>
+                    <p class="student-name">LESTA SINTIKHE ZEBUA</p>
+                    <span class="student-id">TKJ2-21</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">MARINUS GIAWA</p>
+                    <span class="student-id">TKJ2-22</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cewek.jpg" alt="Foto"></div>
+                    <p class="student-name">MERLIN LASE</p>
+                    <span class="student-id">TKJ2-23</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cewek.jpg" alt="Foto"></div>
+                    <p class="student-name">OLIVIA SRI SASTA ZEBUA</p>
+                    <span class="student-id">TKJ2-24</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">RIVALDO SOFATAYA ZEBUA</p>
+                    <span class="student-id">TKJ2-25</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">RONA STEVEN HOWU-HOWU WARUWU</p>
+                    <span class="student-id">TKJ2-26</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">SAFA PRIA BENARTHA LAOLI</p>
+                    <span class="student-id">TKJ2-27</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">SUKUR NIAMAN ZEGA</p>
+                    <span class="student-id">TKJ2-28</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cewek.jpg" alt="Foto"></div>
+                    <p class="student-name">TRIS JULVINA LASE</p>
+                    <span class="student-id">TKJ2-29</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cowok.jpg" alt="Foto"></div>
+                    <p class="student-name">WIKY IMRAN HAREFA</p>
+                    <span class="student-id">TKJ2-30</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="student-card">
+                    <div class="member-photo"><img src="img/cewek.jpg" alt="Foto"></div>
+                    <p class="student-name">YUNI ASTRI TELAUMBANUA</p>
+                    <span class="student-id">TKJ2-31</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 XII TKJ 2
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

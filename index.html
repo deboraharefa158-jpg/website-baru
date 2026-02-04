@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom | XII TKJ 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #0a192f;
+            --accent-blue: #007bff;
+            --text-light: #e6f1ff;
+            --bg-gradient: linear-gradient(135deg, #0a192f 0%, #020c1b 100%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-light);
+            min-height: 100vh;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: rgba(10, 25, 47, 0.95) !important;
+            border-bottom: 1px solid rgba(0, 123, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--accent-blue) !important;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            color: var(--text-light) !important;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-blue) !important;
+        }
+
+        /* Dropdown Customization */
+        .dropdown-menu {
+            background-color: var(--primary-dark);
+            border: 1px solid var(--accent-blue);
+        }
+
+        .dropdown-item {
+            color: var(--text-light);
+            transition: 0.2s;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--accent-blue);
+            color: white;
+        }
+
+        /* Running Text (Marquee) */
+        .marquee-container {
+            background: rgba(0, 123, 255, 0.1);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 123, 255, 0.1);
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-text {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+            font-weight: 500;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .card-custom {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-blue);
+            background: rgba(0, 123, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .img-card {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 123, 255, 0.2);
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.6;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">CLASS COMPUTER & NETWORK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="akademikDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Akademik
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="akademik.html">Jadwal Pelajaran</a></li>
+                            <li><a class="dropdown-item" href="guru.html">Daftar Guru Pengampuh</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="organisasiDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Organisasi
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="struktur.html">Struktur Organisasi</a></li>
+                            <li><a class="dropdown-item" href="anggota.html">Anggota Kelas</a></li>
+                          
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="marquee-container">
+        <div class="marquee-text">
+            Selamat Datang di Website Resmi XII TKJ 2 
+        </div>
+    </div>
+
+    <div class="container hero">
+        <h1 class="display-4 fw-bold mb-3">CLASS <span style="color: var(--accent-blue);">COMPUTER AND NETWORK</span></h1>
+        <p class="lead mb-5 opacity-75">Wadah informasi dan kreativitas digital khusus anggota kelas XII TKJ 2.</p>
+        
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="card-custom">
+                    <img src="img/foto1.jpg" alt="Technology" class="img-card">
+                    <h3 class="mb-3">Visi</h3>
+                    <p>Menjadi pionir digital yang unggul dalam teknologi jaringan dengan semangat kekeluargaan yang erat.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-custom">
+                    <img src="img/foto2.jpg" alt="Cyber" class="img-card">
+                    <h3 class="mb-3">Misi</h3>
+                    <p>Membangun komunikasi digital yang efektif, transparan, dan mendukung setiap perkembangan skill anggota.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-custom">
+                    <img src="img/foto3.jpg" alt="Teamwork" class="img-card">
+                    <h3 class="mb-3">Slogan</h3>
+                    <p>"One Team, One Goal, One Family." - Berangkat bersama, sukses bersama-sama di dunia industri.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 XII TKJ 2 
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
