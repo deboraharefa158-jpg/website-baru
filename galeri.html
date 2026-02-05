@@ -200,6 +200,208 @@
                 <div class="gallery-card">
                     <div class="photo-box"><img src="img/kegiatan7.jpg" alt="Kegiatan"></div>
                     <div class="photo-info"><h6>Natal</h6><p>Natal 2 Tahun lalu</p></div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Foto | XII TKJ 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #0a192f;
+            --accent-blue: #007bff;
+            --text-light: #e6f1ff;
+            --bg-gradient: linear-gradient(135deg, #0a192f 0%, #020c1b 100%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-light);
+            min-height: 100vh;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: rgba(10, 25, 47, 0.95) !important;
+            border-bottom: 1px solid rgba(0, 123, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        .navbar-brand { font-weight: 700; color: var(--accent-blue) !important; }
+        .nav-link { color: var(--text-light) !important; }
+        .nav-link.active { color: var(--accent-blue) !important; }
+
+        /* Gallery Grid */
+        .gallery-section { padding: 60px 0; }
+        
+        .gallery-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 123, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+
+        .gallery-card:hover {
+            transform: scale(1.03);
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+        }
+
+        .photo-box {
+            width: 100%;
+            height: 250px; /* Tinggi kotak foto */
+            overflow: hidden;
+            border-bottom: 1px solid rgba(0, 123, 255, 0.1);
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Biar foto gak gepeng */
+            transition: 0.5s;
+        }
+
+        .photo-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .photo-info h6 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+        }
+
+        .photo-info p {
+            margin: 5px 0 0;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        footer { padding: 40px 0; text-align: center; opacity: 0.5; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">CLASS COMPUTER & NETWORK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="akademikDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Akademik
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="akademik.html">Jadwal Pelajaran</a></li>
+                            <li><a class="dropdown-item" href="guru.html">Daftar Guru Pengampuh</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="organisasiDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Organisasi
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="struktur.html">Struktur Organisasi</a></li>
+                            <li><a class="dropdown-item" href="anggota.html">Anggota Kelas</a></li>
+                       
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container gallery-section">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Galeri Dokumentasi</h1>
+            <p class="text-muted">Kumpulan 20 Momen Terbaik XII TKJ 2</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <div class="photo-box"><img src="img/foto1.jpg" alt="Kegiatan"></div>
+                    <div class="photo-info"><h6>Praktek PKK</h6><p>foto yang diambil pada saat praktek pembuatan produk.</p></div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <div class="photo-box"><img src="img/foto2.jpg" alt="Kegiatan"></div>
+                    <div class="photo-info"><h6>Warmth</h6><p>foto ini diambil saat lampu padam di ruangan, menciptakan momen baru yang 
+                        sangat berkesan.</p></div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <div class="photo-box"><img src="img/foto3.jpg" alt="Kegiatan"></div>
+                    <div class="photo-info"><h6>Natal 2025</h6><p>Natal terakhir bersama teman.</p></div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <div class="photo-box"><img src="img/kegiatan1.jpg" alt="Kegiatan"></div>
+                    <div class="photo-info"><h6>TKJ COMUNNITY</h6><p>Bangga memilih jurusan TKJ.</p></div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <div class="photo-box"><img src="img/kegiatan2.jpg" alt="Kegiatan"></div>
+                    <div class="photo-info"><h6>Pembagian Raport</h6><p>Pembagian raport pertama kami saat kelas 10</p></div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <div class="photo-box"><img src="img/kegiatan3.jpg" alt="Kegiatan"></div>
+                    <div class="photo-info"><h6>Kegiatan P5</h6><p>Mempraktekkan Pernikahan secara Adat Nias </p></div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <div class="photo-box"><img src="img/kegiatan4.png" alt="Kegiatan"></div>
+                    <div class="photo-info"><h6>Belajar</h6><p>Saat Kondisi semuanya ingin tau dan ingin belajar.</p></div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <div class="photo-box"><img src="img/kegiatan5.jpg" alt="Kegiatan"></div>
+                    <div class="photo-info"><h6>HGN</h6><p>Merayan Hari Guru Nasional Tahun 2024 bersama Ibu Pujiani Halawa.</p></div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <div class="photo-box"><img src="img/kegiatan6.jpg" alt="Kegiatan"></div>
+                    <div class="photo-info"><h6>Bersama</h6><p>foto bersama bapak Mikael Telaumbanua.</p></div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="gallery-card">
+                    <div class="photo-box"><img src="img/kegiatan7.jpg" alt="Kegiatan"></div>
+                    <div class="photo-info"><h6>Natal</h6><p>Natal 2 Tahun lalu</p></div>
                 </div>
             </div>
 
@@ -268,7 +470,7 @@
 <div class="col-sm-6 col-md-4 col-lg-3">
     <div class="gallery-card">
         <div class="photo-box">
-            <video width="100%" height="100%" style="object-fit: cover;" autoplay loop muted playsinline>
+            <video width="100%" height="100%" style="object-fit: cover;" controls playsinline>
                 <source src="img/video.mp4" type="video/mp4">
                 Browser tidak mendukung video.
             </video>
@@ -276,6 +478,8 @@
         <div class="photo-info">
             <h6>Cinematic Moments</h6>
             <p>Koleksi video pendek XII TKJ 2.</p>
+        </div>
+</div>
         </div>
     </div>
 </div>
@@ -291,4 +495,4 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+    </html>
